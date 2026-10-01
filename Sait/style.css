@@ -1,0 +1,205 @@
+/* Подключаем игровые шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Стили для Главной страницы (index.html) */
+body.home-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/f1.jpg');
+}
+
+/* Стили для остальных страниц */
+body.other-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/f2.jpg');
+}
+
+/* Навигация */
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 3px solid #00ffcc;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+nav a:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+/* === ГЛАВНАЯ КАРТИНКА НА ГЛАВНОЙ СТРАНИЦЕ === */
+.hero-image {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.main-image {
+    display: block;             /* убрать лишний отступ снизу */
+    max-width: 100%;            /* не выходит за пределы контейнера */
+    width: 100%;                /* растягивается на всю доступную ширину */
+    height: auto;               /* высота по пропорциям */
+    max-height: 500px;          /* НЕ выше 500px (чтобы не было гигантской) */
+    object-fit: cover;          /* заполнить рамку, обрезая по краям */
+    object-position: center;    /* обрезать ровно по центру */
+    border-radius: 10px;        /* скруглённые углы */
+    border: 2px solid #00ffcc;  /* неоновая рамка в стиле сайта */
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);  /* свечение вокруг */
+    margin: 0 auto;             /* центрировать */
+}
+/* Заголовки */
+h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 3px 3px 0px #000;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ff0055;
+}
+
+/* Контейнер контента */
+.container {
+    max-width: 1000px; /* Увеличил ширину для каталога */
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px solid #333;
+}
+
+/* Стили для контактов */
+.contact-info { text-align: center; margin-bottom: 30px; }
+.social-links a {
+    display: inline-block; margin: 10px; padding: 10px 20px;
+    background-color: #333; color: #00ffcc; text-decoration: none;
+    border-radius: 5px; border: 1px solid #00ffcc;
+    font-family: 'Press Start 2P', cursive; font-size: 10px;
+}
+.social-links a:hover { background-color: #00ffcc; color: #000; }
+
+/* Карта */
+.map-container {
+    position: relative; overflow: hidden; padding-top: 56.25%;
+    margin-top: 20px; border: 2px solid #00ffcc;
+}
+.map-container iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+}
+
+/* Форма заказа */
+.order-form {
+    display: flex; flex-direction: column; gap: 15px;
+    max-width: 500px; margin: 0 auto;
+}
+.order-form label {
+    font-family: 'Press Start 2P', cursive; font-size: 10px; color: #00ffcc;
+}
+.order-form input, .order-form select, .order-form textarea {
+    padding: 10px; border-radius: 5px; border: 1px solid #555;
+    background-color: #222; color: #fff; font-family: 'Roboto', sans-serif;
+}
+.order-form button {
+    padding: 15px; background-color: #ff0055; color: white;
+    border: none; cursor: pointer; font-family: 'Press Start 2P', cursive;
+    font-size: 12px; transition: 0.3s;
+}
+.order-form button:hover { background-color: #cc0044; transform: scale(1.02); }
+
+/* === НОВЫЕ СТИЛИ ДЛЯ КАТАЛОГА ИГР === */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.game-card {
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    border-color: #00ffcc;
+}
+
+.game-card img {
+    width: 100%;
+    height: 390px; /* Фиксированная высота для обложек */
+    object-fit: cover; /* Чтобы картинки не искажались */
+    border-bottom: 2px solid #444;
+}
+
+.game-card .game-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-card h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.game-card .price {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #ff0055;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.game-card .buy-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.game-card .buy-btn:hover {
+    background-color: #ff0055;
+    color: #fff;
+}
+
+footer {
+    text-align: center; padding: 20px; margin-top: 50px;
+    font-size: 12px; color: #888;
+}
