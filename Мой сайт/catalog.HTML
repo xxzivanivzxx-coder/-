@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore - Каталог игр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="other-page">
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="order.html">Заказать игру</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="container">
+        <h1>Каталог игр</h1>
+        <p style="text-align: center; font-size: 16px;">Выберите игру мечты и оформите заказ.</p>
+
+        <!-- Сетка каталога. Класс "games-grid" автоматически расставляет карточки в ряд -->
+        <div class="games-grid">
+
+            <!-- ================= ИГРА №1 ================= -->
+            <div class="game-card">
+                <!-- 
+                  Картинка 1: Cyberpunk 2077
+                  Файл должен лежать по пути: images/cyberpunk.jpg
+                  Если картинка не найдена — покажется текст "Cyberpunk 2077"
+                -->
+                <img src="images/cyberpunk.jpg" 
+                     alt="Cyberpunk 2077" 
+                     title="Обложка игры Cyberpunk 2077">
+                
+                <div class="game-info">
+                    <h3>Cyberpunk 2077</h3>
+                    <div class="price">2 999 ₽</div>
+                    <a href="order.html" class="buy-btn">Заказать</a>
+                </div>
+            </div>
+
+            <!-- ================= ИГРА №2 ================= -->
+            <div class="game-card">
+                <!-- 
+                  Картинка 2: The Witcher 3
+                  Файл должен лежать по пути: images/witcher.jpg
+                -->
+                <img src="images/witcher.jpg" 
+                     alt="The Witcher 3: Wild Hunt" 
+                     title="Обложка игры The Witcher 3">
+                
+                <div class="game-info">
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <div class="price">1 499 ₽</div>
+                    <a href="order.html" class="buy-btn">Заказать</a>
+                </div>
+            </div>
+
+            <!-- ================= ИГРА №3 ================= -->
+            <div class="game-card">
+                <!-- 
+                  Картинка 3: GTA V
+                  Файл должен лежать по пути: images/gta.jpg
+                -->
+                <img src="images/gta.jpg" 
+                     alt="Grand Theft Auto V" 
+                     title="Обложка игры Grand Theft Auto V">
+                
+                <div class="game-info">
+                    <h3>Grand Theft Auto V</h3>
+                    <div class="price">2 199 ₽</div>
+                    <a href="order.html" class="buy-btn">Заказать</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- Конец сетки каталога -->
+    </div>
+
+    <footer>
+        &copy; 2023 GameStore. Все права защищены.
+    </footer>
+</body>
+</html>
